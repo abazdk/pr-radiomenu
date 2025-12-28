@@ -37,7 +37,7 @@ local function openRadioMenu()
                     TriggerEvent('changeradioanim', currentAnimation)
                     lib.notify({
                         title = 'Radio Animation',
-                        description = 'Krydset arme animation valgt!',
+                        description = 'Crossed arms animation valgt!',
                         type = 'success'
                     })
                     openRadioMenu()
