@@ -1,8 +1,8 @@
 fx_version 'cerulean'
 game 'gta5'
 
-author 'PR-Store / Abaz'
-description 'PR-Store | Radiomenu'
+author 'Abaz-Development'
+description 'Radiomenu'
 version '2.0.0'
 
 shared_script '@ox_lib/init.lua'
