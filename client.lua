@@ -2,7 +2,7 @@ local currentAnimation = "default"
 local radioClicksEnabled = true
 
 Citizen.CreateThread(function()
-    local saved = GetResourceKvpString("pr-radio_clicks")
+    local saved = GetResourceKvpString("abaz-radio_clicks")
     if saved ~= nil then
         radioClicksEnabled = (saved == "true")
     else
@@ -10,7 +10,7 @@ Citizen.CreateThread(function()
     end
     exports["pma-voice"]:setVoiceProperty('micClicks', radioClicksEnabled)
     
-    local savedAnim = GetResourceKvpString("pr-radio_animation")
+    local savedAnim = GetResourceKvpString("abaz-radio_animation")
     if savedAnim ~= nil then
         currentAnimation = savedAnim
     else
@@ -33,7 +33,7 @@ local function openRadioMenu()
                 icon = 'hands',
                 onSelect = function()
                     currentAnimation = 'crossed_arms'
-                    SetResourceKvp("pr-radio_animation", currentAnimation)
+                    SetResourceKvp("abaz-radio_animation", currentAnimation)
                     TriggerEvent('changeradioanim', currentAnimation)
                     lib.notify({
                         title = 'Radio Animation',
@@ -49,7 +49,7 @@ local function openRadioMenu()
                 icon = 'person',
                 onSelect = function()
                     currentAnimation = 'leanover'
-                    SetResourceKvp("pr-radio_animation", currentAnimation)
+                    SetResourceKvp("abaz-radio_animation", currentAnimation)
                     TriggerEvent('changeradioanim', currentAnimation)
                     lib.notify({
                         title = 'Radio Animation',
@@ -65,7 +65,7 @@ local function openRadioMenu()
                 icon = 'magnifying-glass',
                 onSelect = function()
                     currentAnimation = 'closeup'
-                    SetResourceKvp("pr-radio_animation", currentAnimation)
+                    SetResourceKvp("abaz-radio_animation", currentAnimation)
                     TriggerEvent('changeradioanim', currentAnimation)
                     lib.notify({
                         title = 'Radio Animation',
@@ -81,7 +81,7 @@ local function openRadioMenu()
                 icon = 'rotate-left',
                 onSelect = function()
                     currentAnimation = 'default'
-                    SetResourceKvp("pr-radio_animation", currentAnimation)
+                    SetResourceKvp("abaz-radio_animation", currentAnimation)
                     TriggerEvent('changeradioanim', currentAnimation)
                     lib.notify({
                         title = 'Radio Animation',
@@ -98,7 +98,7 @@ local function openRadioMenu()
                 onSelect = function()
                     radioClicksEnabled = not radioClicksEnabled
                     exports["pma-voice"]:setVoiceProperty('micClicks', radioClicksEnabled)
-                    SetResourceKvp("pr-radio_clicks", radioClicksEnabled and "true" or "false")
+                    SetResourceKvp("abaz-radio_clicks", radioClicksEnabled and "true" or "false")
                     lib.notify({
                         title = 'Radio Clicks',
                         description = radioClicksEnabled and 'Radio clicks aktiveret!' or 'Radio clicks deaktiveret!',
