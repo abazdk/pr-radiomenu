@@ -1,4 +1,4 @@
-# PR-Store - Radiomenu
+# Abaz-Development - Radiomenu
 - Radiomenuen består af 4 radio animationer, hvor den normale / default er inkluderet, det er også muligt at slå radio clicks on / off på menuen.
 
 # Dependencies
@@ -10,6 +10,3 @@
 
 # Credit
 - Discord: abazdk
-
-# Showcase
-- https://streamable.com/lmgzqw
